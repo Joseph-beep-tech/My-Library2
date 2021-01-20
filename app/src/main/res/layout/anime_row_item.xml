@@ -47,7 +47,7 @@
             android:id="@+id/rating"
             android:text="0.0"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rating_background"
+            android:background=" #3affb9"
             android:textColor="#fff"
             android:textSize="15sp"
             android:textStyle="bold"
