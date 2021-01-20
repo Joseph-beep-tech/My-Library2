@@ -17,7 +17,7 @@ Android
 ## Link
 https://github.com/Joseph-beep-tech/My-Library2
 ## Bugs
-No known bug.
+No known Bugs.
 ## Contact Information
 Instagram:Jose_beep
  Email:Josephcluff006@gmail.com.com
