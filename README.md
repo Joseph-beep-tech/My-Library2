@@ -11,8 +11,8 @@ Run the application on the emulator
 
 
 ## Technologies Used
-Java
-Android
+*Java
+*Android
 
 ## Link
 https://github.com/Joseph-beep-tech/My-Library2
