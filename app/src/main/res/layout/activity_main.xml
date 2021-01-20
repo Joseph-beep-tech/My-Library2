@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-1dp"
-        android:background="@color/colorAccent"
+        android:background="#00FFFF"
         android:text="@string/books"
         android:textColor="@color/colorTextIcons" />
 
