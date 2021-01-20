@@ -23,7 +23,7 @@ public class AnimeActivity extends AppCompatActivity {
         // hide the default actionbar
         getSupportActionBar().hide();
 
-        // Recieve data
+        // Recieving data
 
         String name  = getIntent().getExtras().getString("anime_name");
         String description = getIntent().getExtras().getString("anime_description");
@@ -59,7 +59,7 @@ public class AnimeActivity extends AppCompatActivity {
         RequestOptions requestOptions = new RequestOptions().centerCrop().placeholder(R.drawable.loading_shape).error(R.drawable.loading_shape);
 
 
-        // set image using Glide
+        // setting image using Glide
         Glide.with(this).load(image_url).apply(requestOptions).into(img);
 
 
