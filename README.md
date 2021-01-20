@@ -20,6 +20,6 @@ https://github.com/Joseph-beep-tech/My-Library2
 No known Bugs.
 ## Contact Information
 Instagram:Jose_beep
- Email:Josephcluff006@gmail.com.com
+ Email:Josephcluff006@gmail.com
  ## License and copyright
  Copyright (C) **{JOSEPH OKOTH}
