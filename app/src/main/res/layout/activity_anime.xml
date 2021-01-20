@@ -58,7 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/aa_anime_name"
-                        android:text="Anime Title"
+                        android:text="Book Title"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
