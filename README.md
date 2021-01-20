@@ -2,7 +2,7 @@
 ## Author
 JOSEPH OKOTH
 ## Description
-This is an android application that shows the types of vehicles and their information.
+This is an android application that shows different genre books.
 ## Installation
 Download and install Android SDK
 Download and install JAVA
