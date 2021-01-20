@@ -11,7 +11,7 @@ Run the application on the emulator
 
 
 ## Technologies Used
-*Java
+Java
 *Android
 
 ## Link
