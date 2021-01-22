@@ -27,7 +27,7 @@
             android:textColor="#fff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/anime_name"
+            android:id="@+id/book_name"
             android:text="Book Title"
             android:textStyle="bold"
             android:textSize="18sp"/>

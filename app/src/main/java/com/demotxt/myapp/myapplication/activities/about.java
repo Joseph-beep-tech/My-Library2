@@ -14,7 +14,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.demotxt.myapp.myapplication.R;
 import com.demotxt.myapp.myapplication.adapters.RecyclerViewAdapter;
-import com.demotxt.myapp.myapplication.model.Anime;
+import com.demotxt.myapp.myapplication.model.Book;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +29,7 @@ public class about extends AppCompatActivity {
 
     private JsonArrayRequest request ;
     private RequestQueue requestQueue ;
-    private List<Anime> lstAnime ;
+    private List<Book> lstBook;
     private RecyclerView recyclerView ;
 
 
@@ -38,7 +38,7 @@ public class about extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        lstAnime = new ArrayList<>() ;
+        lstBook = new ArrayList<>() ;
         recyclerView = findViewById(R.id.recyclerviewid);
         jsonrequest();
 
@@ -59,15 +59,15 @@ public class about extends AppCompatActivity {
 
                     try {
                         jsonObject = response.getJSONObject(i) ;
-                        Anime anime = new Anime() ;
-                        anime.setName(jsonObject.getString("name"));
-                        anime.setDescription(jsonObject.getString("description"));
-                        anime.setRating(jsonObject.getString("Rating"));
-                        anime.setCategorie(jsonObject.getString("categorie"));
-                        anime.setNb_episode(jsonObject.getInt("episode"));
-                        anime.setStudio(jsonObject.getString("studio"));
-                        anime.setImage_url(jsonObject.getString("img"));
-                        lstAnime.add(anime);
+                        Book book = new Book() ;
+                        book.setName(jsonObject.getString("name"));
+                        book.setDescription(jsonObject.getString("description"));
+                        book.setRating(jsonObject.getString("Rating"));
+                        book.setCategorie(jsonObject.getString("categorie"));
+                        book.setNb_episode(jsonObject.getInt("episode"));
+                        book.setStudio(jsonObject.getString("studio"));
+                        book.setImage_url(jsonObject.getString("img"));
+                        lstBook.add(book);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -76,7 +76,7 @@ public class about extends AppCompatActivity {
 
                 }
 
-                setuprecyclerview(lstAnime);
+                setuprecyclerview(lstBook);
 
             }
         }, new Response.ErrorListener() {
@@ -93,10 +93,10 @@ public class about extends AppCompatActivity {
 
     }
 
-    private void setuprecyclerview(List<Anime> lstAnime) {
+    private void setuprecyclerview(List<Book> lstBook) {
 
 
-        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this,lstAnime) ;
+        RecyclerViewAdapter myadapter = new RecyclerViewAdapter(this, lstBook) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myadapter);
 

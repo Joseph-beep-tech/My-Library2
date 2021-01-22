@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.demotxt.myapp.myapplication.activities.AnimeActivity;
-import com.demotxt.myapp.myapplication.model.Anime;
+import com.demotxt.myapp.myapplication.activities.BookActivity;
+import com.demotxt.myapp.myapplication.model.Book;
 import com.demotxt.myapp.myapplication.R ;
 
 import java.util.List;
@@ -27,11 +27,11 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext ;
-    private List<Anime> mData ;
+    private List<Book> mData ;
     RequestOptions option;
 
 
-    public RecyclerViewAdapter(Context mContext, List<Anime> mData) {
+    public RecyclerViewAdapter(Context mContext, List<Book> mData) {
         this.mContext = mContext;
         this.mData = mData;
 
@@ -45,20 +45,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         View view ;
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        view = inflater.inflate(R.layout.anime_row_item,parent,false) ;
+        view = inflater.inflate(R.layout.book_row_item,parent,false) ;
         final MyViewHolder viewHolder = new MyViewHolder(view) ;
         viewHolder.view_container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(mContext, AnimeActivity.class);
-                i.putExtra("anime_name",mData.get(viewHolder.getAdapterPosition()).getName());
-                i.putExtra("anime_description",mData.get(viewHolder.getAdapterPosition()).getDescription());
-                i.putExtra("anime_studio",mData.get(viewHolder.getAdapterPosition()).getStudio());
-                i.putExtra("anime_category",mData.get(viewHolder.getAdapterPosition()).getCategorie());
-                i.putExtra("anime_nb_episode",mData.get(viewHolder.getAdapterPosition()).getNb_episode());
-                i.putExtra("anime_rating",mData.get(viewHolder.getAdapterPosition()).getRating());
-                i.putExtra("anime_img",mData.get(viewHolder.getAdapterPosition()).getImage_url());
+                Intent i = new Intent(mContext, BookActivity.class);
+                i.putExtra("book_name",mData.get(viewHolder.getAdapterPosition()).getName());
+                i.putExtra("book_description",mData.get(viewHolder.getAdapterPosition()).getDescription());
+                i.putExtra("book_studio",mData.get(viewHolder.getAdapterPosition()).getStudio());
+                i.putExtra("book_category",mData.get(viewHolder.getAdapterPosition()).getCategorie());
+                i.putExtra("book_nb_episode",mData.get(viewHolder.getAdapterPosition()).getNb_episode());
+                i.putExtra("book_rating",mData.get(viewHolder.getAdapterPosition()).getRating());
+                i.putExtra("book_img",mData.get(viewHolder.getAdapterPosition()).getImage_url());
 
                 mContext.startActivity(i);
 
@@ -109,7 +109,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
 
             view_container = itemView.findViewById(R.id.container);
-            tv_name = itemView.findViewById(R.id.anime_name);
+            tv_name = itemView.findViewById(R.id.book_name);
             tv_category = itemView.findViewById(R.id.categorie);
             tv_rating = itemView.findViewById(R.id.rating);
             tv_studio = itemView.findViewById(R.id.studio);

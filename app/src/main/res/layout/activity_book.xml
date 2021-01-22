@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demotxt.myapp.myapplication.activities.AnimeActivity"
+    tools:context="com.demotxt.myapp.myapplication.activities.BookActivity"
     android:background="#303030">
 
     <android.support.design.widget.AppBarLayout
@@ -57,7 +57,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/aa_anime_name"
+                        android:id="@+id/aa_book_name"
                         android:text="Book Title"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
